@@ -499,7 +499,7 @@ mod.GetKeeper().NewMutex("mutex key").Lock(ctx.Context(),
 1. 需要在Params里面定义一个字段 Output map[string]string `json:"output"`
 2. 通过下面的函数，在action运行结束时，把output设置一下
 	```go
-	// // 输出参数，如果没传，就用Name保存整个请求的结构体
+	// 输出参数，如果没传，就用Name保存整个请求的结构体
 	// key 是输出参数的key
 	// value 是从结构体中的字段 参考gjson的field格式 https://github.com/tidwall/gjson/blob/master/SYNTAX.md
 	func ShareSetOutput(ctx ExecuteContext, output map[string]string, bs []byte) error {
